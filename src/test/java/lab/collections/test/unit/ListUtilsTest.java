@@ -1,17 +1,18 @@
 package lab.collections.test.unit;
 
-import static com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type.Int;
-import static org.junit.Assert.*;
-import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.junit.runners.JUnit4;
-
-import lab.collections.ListUtils;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
+
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.junit.runners.JUnit4;
+
+import lab.collections.ListUtils;
 
 /**
  * Created by nmpacko on 17/11/2019.

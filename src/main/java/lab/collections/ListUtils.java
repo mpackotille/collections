@@ -31,8 +31,10 @@ public class ListUtils {
 				IntStream.range(0,finalIndex+1)
 				// extract all partitions start index
 				.filter(index-> {return (index==0||index%partitionSize==0);})
-				// build each partition from its start index
-				.mapToObj(startIndex->list.subList(startIndex,startIndex+partitionSize<=finalIndex?startIndex+partitionSize:finalIndex+1))
+				// build each partition from its start index to the next start index
+				.mapToObj(startIndex->{
+					int nextStartIndex=startIndex+partitionSize;
+					return list.subList(startIndex,nextStartIndex<=finalIndex?nextStartIndex:finalIndex+1);})
 				// collect all partitions
 				.collect(Collectors.toList());
 		return partitionsList;
